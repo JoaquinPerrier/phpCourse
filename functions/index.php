@@ -32,9 +32,9 @@
     function add($x, $y){
         return $x + $y;
     }
-    echo "The result is " . add($num1, $num2);
+    echo "The result is " . add($num1, $num2). "<br>";
 
-    // Retornos por referencia
+    // Retornos por valor
     $test = 12;
     function addByValue($x){
         $x += 5;
@@ -50,6 +50,15 @@
     addByReference($test);
     echo "The value is: " . $test . "<br>";
 
+    // CONSTANTES
+    // 1er parametro: nombre de la variable, 2do parametro: valor de la variable
+    define("COMPANY_NAME", "Apple");
+
+    // con "const" se pueden definir
+    const MY_NAME = "Dary";
+
+    // Para imprimir la constante, no se usa el signo pesos
+    echo COMPANY_NAME . MY_NAME;
 
     ?>
 </body>
