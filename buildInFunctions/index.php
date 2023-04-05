@@ -102,6 +102,14 @@
     $time = strtotime('4:00pm December 03 2019');
     echo $time . "<br>"; // Imprime un timestamp con los segundos desde el 1ro de enero de 1970. Se llama UNIX timestamp
 
+    echo date('j/n/Y H:i:s A') . "<br>";
+
+    // NUMERO RANDOM:
+
+    echo rand() . "<br>";
+    // Se puede pasar el mínimo y el máximo como parámetros
+    echo rand(1, 10) . "<br>";
+
 
 
     ?>
