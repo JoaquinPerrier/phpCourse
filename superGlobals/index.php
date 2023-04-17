@@ -21,11 +21,25 @@
     echo $z;
 
     // $_POST
+    // Recoje información de los forms HTML
+    if(isset($_POST)){
+        echo $_POST['name'] . ", your form is submitted <br>";
+    }
+
+    print_r($_POST);
+
     // $_GET
     // $_SERVER
     // $_COOKIE
     // $_SESSION
     // $_FILES
 ?>
+
+<form action="post.php" method="post">
+    <input type="text" name="name">
+    <input type="text" name="age">
+    <button type="submit">SUBMIT</button>
+</form>
+
 </body>
 </html>
