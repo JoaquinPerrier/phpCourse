@@ -29,9 +29,32 @@
     print_r($_POST);
 
     // $_GET
-    // $_SERVER
-    // $_COOKIE
+    // Data va a estar visible en el URL, al momento de darle submit
+    /*
+    <form action="post.php" method="get">
+        <input type="text" name="name">
+        <input type="text" name="age">
+        <button type="submit">SUBMIT</button>
+    </form>
+    */
+
     // $_SESSION
+    // Es util para usar información importante
+    // La sesion existe mientra el explorador esté abierto
+    session_start();
+    // guardar datos
+    $_SESSION['name'] = "Dary";
+    $_SESSION['age'] = 28;
+
+    echo "Hello " . $_SESSION["name"] . "<br>";
+
+
+
+
+    // $_COOKIE
+    // Se almacenan en la pc del usuario
+
+    // $_SERVER
     // $_FILES
 ?>
 
