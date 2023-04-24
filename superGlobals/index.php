@@ -52,7 +52,12 @@
 
 
     // $_COOKIE
-    // Se almacenan en la pc del usuario
+    // Se almacenan en la pc del usuario. NO SE GUARDA INFORMACION SENSIBLE
+    // Puede poseer 6 argunmentos: nombre, valor, expiración (EN SEGUNDOS. Si no se incluye, la cookie dura lo que dure la session), path del sv, dominio, seguridad 
+    $time = time() + 86400 * 30;
+    setcookie("name","Daryl", $time);
+
+    print_r($_COOKIE);
 
     // $_SERVER
     // $_FILES
