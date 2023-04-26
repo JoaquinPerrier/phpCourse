@@ -59,13 +59,31 @@
 
     print_r($_COOKIE);
 
-    // $_SERVER
     // $_FILES
+    // Como subir archivos
+    // 1. Subirlo a la raiz
+                        // type y name
+    echo $name = $_FILES['file']['name'] . "<br>"; // Muestra nombre del archivo
+    echo $type = $_FILES['file']['type'] . "<br>"; // Muestra el tipo de archivo
+    echo $tmp_location = $_FILES['file']['tmp_name'] . "<br>"; // Muestra el lugar donde se almacena el archivo temporalmente
+    echo $error = $_FILES['file']['error'] . "<br>"; // Muestra el error (si existe)
+
+
+
+    // 2. Subirlo derecho a la DB
+    
+    // $_SERVER
 ?>
 
 <form action="post.php" method="post">
     <input type="text" name="name">
     <input type="text" name="age">
+    <button type="submit">SUBMIT</button>
+</form>
+
+<!-- FORM PARA SUBIR ARCHIVOS -->
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
     <button type="submit">SUBMIT</button>
 </form>
 
