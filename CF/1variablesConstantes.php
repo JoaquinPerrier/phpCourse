@@ -33,4 +33,31 @@ $suma2 = $numero + $numero1;
 
 echo $suma; // DEVUELVE 30, PORQUE PHP AUTOMATICAMENTE CAMBIA EL STRING A INT
 echo intval($suma2); // FUERZA QUE EL TIPO DE RESULTADO SEA ENTERO
+
+$palabra = "Codigo";
+$palabra2 = "Facilito";
+
+// Concatenación a traves del "."
+echo "Hola " . $palabra . " " . $palabra2;
+
+// Interpolación
+echo "Hola $palabra {$palabra2}Uniendo" // SE PUEDE INTERPOLAR SOLO EN COMILLAS DOBLES
+echo "\"Hola mi amigo\" dijo el capo del sur";
+
+// Heredoc: funcionan como comillas dobles ""
+$saludo = "Hola capo como tay";
+echo <<<Frase
+$saludo
+No cuentes los días, haz que los días cuenten.
+Frase;
+
+// NowDoc: funcionan como comillas simples. Es igual a heredoc, pero con comillas en el nombre de la variable
+echo <<<'Frase'
+$saludo
+'Hola perreke'
+Frase;
+
+// FUNCIONES DE ARRAYS
+// Extracción: substr()
+$city = substr("Rosario Central", 0, 6); // 2do param de donde arranca, 3ero donde termina
 ?>
