@@ -1,11 +1,13 @@
 <?php
 require_once("conexion.php");
+
 class crud extends Conexion{
     private $pdo;
-    public function __contructor(
+    public function __construct(
         public string $tabla,
 
     ){
+        parent::__construct();
         $this->pdo = $this->conexion();
     }
 
@@ -39,7 +41,7 @@ class crud extends Conexion{
 
     public function crear(string $columnas, string $marcadores, array $datos){
         try {
-            $stm = $this->pdo->prepare("INSERT INTO $this->tabla $columnas VALUES $marcadores ");
+            $stm = $this->pdo->prepare("INSERT INTO $this->tabla ($columnas) VALUES ($marcadores)");
             $stm->execute([$datos]);
         } catch (PDOException $mensaje) {
             echo $mensaje->getMessage();

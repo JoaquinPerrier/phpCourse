@@ -1,12 +1,12 @@
 <?php
  class Conexion{
-    public function __contruct(
-        string $driver = "mysql",
-        string $host = "localhost", // ACA IRIA LA DIRECCION DE LA BASE DE DATOS
-        string $user = "root",
-        string $password = "",
-        string $dbName = "sunny_side",
-        string $charset = "utf8"
+    public function __construct(
+        public string $driver = "mysql",
+        public string $host = "localhost", // ACA IRIA LA DIRECCION DE LA BASE DE DATOS
+        public string $user = "root",
+        public string $password = "",
+        public string $dbName = "sunny_side",
+        public string $charset = "utf8"
     ){}
 
     protected function conexion(){
